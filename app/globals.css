@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+body{
+
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+}
+
+.container{
+
+    @apply px-[5rem] 
+}
+
+.secondary_btn{
+
+    @apply bg-gray-400 text-blue-950 py-2 px-4 rounded-lg hover:bg-gray-700 hover:text-white duration-300
+}
+
+.primary_btn{
+
+    @apply bg-green-400 text-blue-950 py-2 px-4 rounded-lg hover:bg-gray-700 hover:text-white duration-300
+}
+
+.hero{
+
+    background-size: cover;
+    background-repeat: none;
+}
+
+/* round progress bars */
+
+
+.circle-wrap .circle .mask,
+.circle-wrap .circle .fill {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.mask .fill {
+  clip: rect(0px, 90px, 150px, 0px);
+  background-color: #c20d16;
+}
+
+.circle-wrap .circle .mask {
+    clip: rect(0px, 150px, 150px, 75px);
+  }
+  
+  .mask.full,
+  .circle .fill {
+    animation: fill ease-in-out 3s;
+    transform: rotate(135deg);
+  }
+  
+  @keyframes fill{
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(135deg);
+    }
+  }
+
+  .circle-wrap .inside-circle {
+    width: 122px;
+    height: 122px;
+    border-radius: 50%;
+    background: #11ee2f;
+    line-height: 120px;
+    text-align: center;
+    margin-top: 14px;
+    margin-left: 14px;
+    color: #eb1515;
+    position: absolute;
+    z-index: 100;
+    font-weight: 700;
+    font-size: 2em;
+  }
